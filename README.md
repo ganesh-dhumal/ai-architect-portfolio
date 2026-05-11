@@ -1,69 +1,203 @@
 # AI Architect Portfolio Roadmap
 
-This repository tracks the 90-day implementation roadmap for the Python × Generative AI × Agentic AI Professional Engineer Program.
+This repository tracks a 90-day production-grade AI engineering roadmap aligned with the Python × Generative AI × Agentic AI Professional Engineer Program.
 
-## Objectives
+## Strategic Shift
 
-- Build production-grade AI engineering systems
-- Maintain consistent GitHub contribution activity
-- Ship portfolio-grade GenAI projects
-- Demonstrate AI Architect and LLMOps capabilities
+The roadmap has evolved from:
+- isolated template commits
 
-## 90-Day Roadmap
+To:
+- validated feature-first engineering systems
 
-### Month 1 — Foundations + First AI Systems
-- Python engineering foundations
-- FastAPI backend systems
-- PostgreSQL integration
-- Streamlit applications
-- LLM integrations
-- Semantic search systems
+Every implementation batch must now include:
+- executable architecture
+- validation strategy
+- automated tests
+- CI/CD verification
+- expected outputs
+- production readiness
+- documentation
+- deployment readiness
 
-### Month 2 — Production RAG + Advanced Retrieval
-- Production RAG pipelines
-- Hybrid retrieval
-- Reranking
-- GraphRAG
-- LangSmith observability
-- LLMOps foundations
+---
 
-### Month 3 — Agentic AI + Deployment
-- LangGraph systems
-- Multi-agent workflows
-- MCP integrations
-- Redis caching
-- CI/CD pipelines
-- Docker + cloud deployment
+# Engineering Philosophy
 
-## Planned Capstone Projects
+The objective is to build repositories that resemble real-world AI platform engineering rather than tutorial-style code dumps.
 
-1. Enterprise RAG Assistant
-2. Multi-Agent Research Crew
-3. Customer Support Agent System
-4. MCP Enterprise Data Agent
+Each repository should be:
 
-## Technology Stack
+- runnable
+- testable
+- deployable
+- observable
+- modular
+- production-oriented
+- portfolio-grade
 
-- Python
-- FastAPI
-- Streamlit
-- PostgreSQL
-- Redis
-- LangChain
-- LangGraph
-- LlamaIndex
-- OpenAI
-- Ollama
-- Docker
+---
+
+# 90-Day Execution Plan
+
+## Month 1 — Backend + Python Engineering Foundations
+
+### Repositories
+
+#### 1. python-ai-foundations
+Production Python utilities and engineering standards.
+
+Features:
+- configuration management
+- logging architecture
+- resilience toolkit
+- async helpers
+- utility layer
+- testing framework
+- CI/CD
+
+---
+
+#### 2. fastapi-ai-starter
+Production-ready FastAPI AI backend.
+
+Features:
+- AI inference APIs
+- middleware
+- observability
+- JWT authentication
+- request tracing
+- async architecture
+- Docker support
 - GitHub Actions
-- AWS/Azure
+- pytest validation
 
-## Contribution Strategy
+Validation:
+- API tests
+- linting
+- type checks
+- curl examples
+- expected responses
 
-- Daily commits
-- Weekly architecture improvements
-- CI/CD integration
-- Observability dashboards
-- Evaluation-driven development
+---
 
-This roadmap is aligned with the programme syllabus and structured for production-grade AI engineering growth.
+## Month 2 — Production RAG Systems
+
+### Repositories
+
+#### 3. production-rag-system
+Enterprise-grade RAG architecture.
+
+Features:
+- ingestion pipelines
+- embedding pipelines
+- hybrid retrieval
+- reranking
+- citation engine
+- evaluation framework
+- hallucination mitigation
+- Redis caching
+- Qdrant integration
+
+Validation:
+- retrieval evaluation
+- RAGAS scoring
+- benchmark datasets
+- latency validation
+
+---
+
+#### 4. advanced-rag-lab
+Advanced retrieval experimentation.
+
+Features:
+- GraphRAG
+- query rewriting
+- multimodal retrieval
+- semantic chunking
+- adaptive retrieval
+
+---
+
+## Month 3 — Agentic AI + LLMOps
+
+### Repositories
+
+#### 5. langgraph-agent-platform
+Production multi-agent workflows.
+
+Features:
+- LangGraph orchestration
+- supervisor-worker agents
+- memory systems
+- tool calling
+- retries
+- checkpointing
+- HITL workflows
+
+Validation:
+- workflow testing
+- failure recovery tests
+- execution tracing
+
+---
+
+#### 6. llmops-observability-stack
+LLMOps and production monitoring.
+
+Features:
+- LangFuse
+- OpenTelemetry
+- token tracking
+- cost dashboards
+- semantic caching
+- tracing
+- evaluation monitoring
+
+---
+
+# Engineering Validation Standards
+
+Every feature implementation must include:
+
+## Code Quality
+- Ruff
+- Black
+- mypy
+- pytest
+
+## Runtime Validation
+- executable examples
+- expected outputs
+- sample requests
+- sample responses
+- error handling
+
+## DevOps
+- GitHub Actions
+- Docker support
+- environment management
+- deployment readiness
+
+## Documentation
+- README
+- architecture diagrams
+- API documentation
+- validation instructions
+
+---
+
+# Long-Term Outcome
+
+By the end of the roadmap, the GitHub ecosystem should demonstrate:
+
+- Senior AI Engineering capability
+- AI Architect-level system design
+- production GenAI engineering
+- enterprise backend systems
+- RAG expertise
+- Agentic AI workflows
+- LLMOps practices
+- deployment and observability maturity
+
+This roadmap is aligned with production AI engineering standards rather than tutorial-driven development.
