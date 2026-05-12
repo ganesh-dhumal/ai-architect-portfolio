@@ -1,0 +1,71 @@
+version: '3.9'
+
+services:
+  fastapi-ai-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi-ai-starter
+
+    container_name: fastapi-ai-service
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      ENVIRONMENT: development
+      LOG_LEVEL: INFO
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/ai_platform
+      REDIS_URL: redis://redis:6379/0
+
+    depends_on:
+      - postgres
+      - redis
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+    volumes:
+      - ./:/app
+
+  postgres:
+    image: postgres:16
+
+    container_name: ai-postgres
+
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ai_platform
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    restart: unless-stopped
+
+  redis:
+    image: redis:7
+
+    container_name: ai-redis
+
+    ports:
+      - "6379:6379"
+
+    restart: unless-stopped
+
+    command: redis-server --appendonly yes
+
+    volumes:
+      - redis_data:/data
+
+volumes:
+  postgres_data:
+  redis_data:
