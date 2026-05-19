@@ -1,0 +1,54 @@
+version: '3.9'
+
+services:
+  ai-platform:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: integrated-ai-platform
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      REDIS_URL: redis://redis:6379/0
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: 6333
+
+    depends_on:
+      - redis
+      - qdrant
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  redis:
+    image: redis:7
+
+    container_name: ai-platform-redis
+
+    ports:
+      - "6379:6379"
+
+    restart: unless-stopped
+
+  qdrant:
+    image: qdrant/qdrant:latest
+
+    container_name: ai-platform-qdrant
+
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+
+    restart: unless-stopped
+
+volumes:
+  redis_data:
