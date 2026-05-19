@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+pydantic
+httpx
+redis
+qdrant-client
+openai
+pytest
+pytest-asyncio
+python-jose
+passlib[bcrypt]
+langgraph
